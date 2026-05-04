@@ -15,13 +15,13 @@ export default async function LoginPage({
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-6">
       <div className="w-full max-w-sm rounded-3xl border border-border bg-white p-8 text-center shadow-sm">
-        <span
-          aria-hidden
-          className="mx-auto mb-6 inline-block h-8 w-8 rounded-[10px] bg-foreground"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logo.svg"
+          alt="TechBBQ Tools"
+          className="mx-auto mb-6 h-8 w-auto"
         />
-        <h1 className="text-2xl font-semibold tracking-tight text-foreground">
-          TechBBQ Tools
-        </h1>
+        <h1 className="sr-only">TechBBQ Tools</h1>
         <p className="mt-2 text-sm leading-relaxed text-muted">
           Sign in with your <span className="font-medium text-foreground">@techbbq.org</span> Google
           account to continue.

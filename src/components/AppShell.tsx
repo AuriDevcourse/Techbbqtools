@@ -10,9 +10,9 @@ export async function AppShell({ children }: { children: ReactNode }) {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-30 border-b border-border bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-14 w-full max-w-[1400px] items-center justify-between px-6">
-          <Link href="/" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span aria-hidden className="inline-block h-5 w-5 rounded-[6px] bg-foreground" />
-            <span>TechBBQ Tools</span>
+          <Link href="/" className="flex items-center" aria-label="TechBBQ Tools">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo.svg" alt="TechBBQ Tools" className="h-7 w-auto" />
           </Link>
           <nav className="hidden items-center gap-7 text-sm text-muted md:flex">
             <Link href="/" className="transition-colors hover:text-foreground">
