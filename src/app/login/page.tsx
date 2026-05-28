@@ -41,6 +41,12 @@ export default async function LoginPage({
             Continue with Google
           </button>
         </form>
+
+        <p className="mt-5 rounded-2xl bg-pill px-4 py-3 text-xs leading-relaxed text-muted">
+          Heads up: soon, only{" "}
+          <span className="font-medium text-foreground">@techbbq.org</span>{" "}
+          accounts will be able to sign in.
+        </p>
       </div>
     </main>
   );

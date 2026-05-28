@@ -5,6 +5,7 @@ import { VisualGenHero } from "./heroes/VisualGenHero";
 import { EmailResponderHero } from "./heroes/EmailResponderHero";
 import { ToneOfVoiceHero } from "./heroes/ToneOfVoiceHero";
 import { PersonalKitHero } from "./heroes/PersonalKitHero";
+import { KnowledgeBaseHero } from "./heroes/KnowledgeBaseHero";
 
 const heroes: Record<string, React.ComponentType> = {
   signature: SignatureHero,
@@ -12,17 +13,15 @@ const heroes: Record<string, React.ComponentType> = {
   "email-responder": EmailResponderHero,
   "tone-of-voice": ToneOfVoiceHero,
   "personal-kit": PersonalKitHero,
+  "knowledge-base": KnowledgeBaseHero,
 };
 
 export function ToolCard({ tool }: { tool: Tool }) {
   const Hero = heroes[tool.id] ?? null;
-  return (
-    <a
-      href={tool.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block focus:outline-none"
-    >
+  const isSoon = tool.status === "soon";
+
+  const content = (
+    <>
       <div
         className="relative aspect-square w-full overflow-hidden rounded-[2.5rem] transition-transform duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_30px_60px_rgba(0,0,0,0.18)]"
         style={{ backgroundColor: tool.bg, color: tool.fg }}
@@ -41,11 +40,32 @@ export function ToolCard({ tool }: { tool: Tool }) {
         <p className="mt-1.5 text-sm leading-snug text-muted">
           {tool.description}
         </p>
-        <div className="mt-3 inline-flex items-center gap-1 rounded-full border border-border bg-pill px-3 py-1 text-xs font-medium text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
-          {tool.cta}
-          <ArrowUpRight className="h-3 w-3" />
-        </div>
+        {isSoon ? (
+          <div className="mt-3 inline-flex items-center gap-1 rounded-full border border-border bg-pill px-3 py-1 text-xs font-medium text-muted">
+            Coming soon
+          </div>
+        ) : (
+          <div className="mt-3 inline-flex items-center gap-1 rounded-full border border-border bg-pill px-3 py-1 text-xs font-medium text-foreground transition-colors group-hover:bg-foreground group-hover:text-background">
+            {tool.cta}
+            <ArrowUpRight className="h-3 w-3" />
+          </div>
+        )}
       </div>
+    </>
+  );
+
+  if (isSoon) {
+    return <div className="block cursor-default">{content}</div>;
+  }
+
+  return (
+    <a
+      href={tool.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block focus:outline-none"
+    >
+      {content}
     </a>
   );
 }

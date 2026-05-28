@@ -75,4 +75,16 @@ export const tools: Tool[] = [
     fg: "#ffffff",
     cta: "Open tool",
   },
+  {
+    id: "knowledge-base",
+    name: "Knowledge Base",
+    tagline: "Searchable TechBBQ team wiki",
+    description:
+      "One place to find processes, brand assets, and answers to the questions that keep coming up.",
+    href: "#",
+    status: "soon",
+    bg: "#0EA5E9",
+    fg: "#ffffff",
+    cta: "Open tool",
+  },
 ];
