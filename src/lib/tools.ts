@@ -18,12 +18,24 @@ export const tools: Tool[] = [
   {
     id: "visual-generator",
     name: "Visual Generator",
-    tagline: "AI-generated TechBBQ social media visuals",
+    tagline: "Panel & session announcement graphics",
     description:
-      "Chat-based creative director that produces on-brand social posts and exports PNG or MP4.",
+      "Template builder for panel, chat, and partner session graphics. Drop in headshots, pick a format, export.",
     href: "https://tbbqvisualgen.vercel.app/",
     status: "live",
     bg: "#5B4BFF",
+    fg: "#ffffff",
+    cta: "Open tool",
+  },
+  {
+    id: "personal-kit",
+    name: "Personal Kit",
+    tagline: "Share-ready TechBBQ promo cards",
+    description:
+      "Pick your role, add a photo and your details, and export a personalized TechBBQ card to share.",
+    href: "https://personalkit.vercel.app/",
+    status: "live",
+    bg: "#E8476B",
     fg: "#ffffff",
     cta: "Open tool",
   },

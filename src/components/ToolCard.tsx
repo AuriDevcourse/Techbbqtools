@@ -4,12 +4,14 @@ import { SignatureHero } from "./heroes/SignatureHero";
 import { VisualGenHero } from "./heroes/VisualGenHero";
 import { EmailResponderHero } from "./heroes/EmailResponderHero";
 import { ToneOfVoiceHero } from "./heroes/ToneOfVoiceHero";
+import { PersonalKitHero } from "./heroes/PersonalKitHero";
 
 const heroes: Record<string, React.ComponentType> = {
   signature: SignatureHero,
   "visual-generator": VisualGenHero,
   "email-responder": EmailResponderHero,
   "tone-of-voice": ToneOfVoiceHero,
+  "personal-kit": PersonalKitHero,
 };
 
 export function ToolCard({ tool }: { tool: Tool }) {

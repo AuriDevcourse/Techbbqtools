@@ -6,18 +6,20 @@ export function VisualGenHero() {
           <div className="flex h-full flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="rounded-full bg-white/20 px-2.5 py-1 text-[10px] font-medium uppercase tracking-wider text-white backdrop-blur-sm">
+                Panel
+              </span>
+              <span className="text-[10px] font-medium uppercase tracking-[0.18em] text-white/70">
                 TechBBQ 2026
               </span>
-              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 text-[10px] text-white backdrop-blur-sm">
-                AI
-              </div>
             </div>
-            <div>
-              <p className="text-[28px] font-semibold leading-[1.05] text-white">
-                Doors are open.
-              </p>
-              <p className="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-white/80">
-                26–27 Aug · Bella Center
+            <div className="flex items-end justify-between">
+              <div className="flex -space-x-2">
+                <div className="h-9 w-9 rounded-full border-2 border-white/80 bg-gradient-to-br from-amber-300 to-orange-500" />
+                <div className="h-9 w-9 rounded-full border-2 border-white/80 bg-gradient-to-br from-sky-300 to-blue-600" />
+                <div className="h-9 w-9 rounded-full border-2 border-white/80 bg-gradient-to-br from-emerald-300 to-teal-600" />
+              </div>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-white/80">
+                3 speakers
               </p>
             </div>
           </div>
